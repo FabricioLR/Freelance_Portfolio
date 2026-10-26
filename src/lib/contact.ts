@@ -1,5 +1,4 @@
-// TODO: replace with Fabrício's real WhatsApp number (country + area code, digits only)
-export const WHATSAPP_NUMBER = "5561999999999";
+export const WHATSAPP_NUMBER = "5561995798701";
 export const EMAIL = "fabriciolongodearaujo@gmail.com";
 export const PORTFOLIO_URL = "https://www.fabriciolr.online/";
 

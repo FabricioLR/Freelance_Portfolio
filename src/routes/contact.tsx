@@ -55,7 +55,7 @@ function Contact() {
         <div className="absolute inset-0 bg-glow" aria-hidden />
         <div className="relative mx-auto max-w-4xl px-6 py-24 text-center">
           <p className="font-mono text-sm text-primary">{c.kicker}</p>
-          <h1 className="mt-4 text-5xl font-extrabold sm:text-6xl">{c.title}</h1>
+          <h1 className="mt-4 text-5xl sm:text-6xl">{c.title}</h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">{c.p}</p>
           <div className="mt-12 grid gap-5 text-left sm:grid-cols-2">
             <a href={whatsappLink(c.waMessage)} target="_blank" rel="noreferrer" className="rounded-2xl border bg-card p-8 transition-colors hover:border-whatsapp">

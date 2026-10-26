@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
 const content = {
   en: {
     available: "// available for freelance projects",
-    h1a: "Tech that makes your small business",
+    h1a: "Tech that makes your business",
     h1b: "run itself.",
     heroP: "I'm Fabrício, a software developer in Brasília. I build websites, automate repetitive tasks and keep your servers running — so you can focus on your customers.",
     wa: "Talk on WhatsApp",
@@ -44,7 +44,7 @@ const content = {
     why: [
       { t: "Full-stack + infra", d: "From the website to the server it runs on — one person, no handoffs." },
       { t: "Local & close", d: "Based in Brasília. Same timezone, same language, quick replies." },
-      { t: "Real projects", d: "WhatsApp news bot, cloud storage platform, Grafana cost plugin and more." },
+      { t: "Real experience", d: "Software Developer with strong knowledge of architecture, automation and legacy code." },
     ],
     portfolioLink: "See my portfolio →",
     ctaTitle: "Have an idea or a problem?",
@@ -53,7 +53,7 @@ const content = {
   },
   pt: {
     available: "// disponível para projetos freelance",
-    h1a: "Tecnologia que faz sua pequena empresa",
+    h1a: "Tecnologia que faz sua empresa",
     h1b: "funcionar sozinha.",
     heroP: "Sou o Fabrício, desenvolvedor de software em Brasília. Crio sites, automatizo tarefas repetitivas e mantenho seus servidores no ar — para você focar nos seus clientes.",
     wa: "Falar no WhatsApp",
@@ -77,7 +77,7 @@ const content = {
     why: [
       { t: "Full-stack + infraestrutura", d: "Do site ao servidor onde ele roda — uma só pessoa, sem repasses." },
       { t: "Local & próximo", d: "Baseado em Brasília. Mesmo fuso, mesmo idioma, respostas rápidas." },
-      { t: "Projetos reais", d: "Bot de notícias no WhatsApp, plataforma de armazenamento em nuvem, plugin de custos do Grafana e mais." },
+      { t: "Experiência real", d: "Desenvolvedor de Software com forte conhecimento em arquitetura, automação e código legado." },
     ],
     portfolioLink: "Veja meu portfólio →",
     ctaTitle: "Tem uma ideia ou um problema?",
@@ -97,7 +97,7 @@ function Index() {
         <div className="absolute inset-0 bg-glow" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-24 sm:pt-32">
           <p className="font-mono text-sm text-primary">{c.available}</p>
-          <h1 className="mt-4 max-w-4xl text-5xl font-extrabold leading-[1.05] sm:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-7xl">
             {c.h1a} <span className="text-primary">{c.h1b}</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{c.heroP}</p>
@@ -156,7 +156,7 @@ function Index() {
 
       <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="relative overflow-hidden rounded-3xl bg-primary px-8 py-16 text-center text-primary-foreground">
-          <h2 className="text-3xl font-extrabold sm:text-5xl">{c.ctaTitle}</h2>
+          <h2 className="text-3xl sm:text-5xl">{c.ctaTitle}</h2>
           <p className="mx-auto mt-4 max-w-xl opacity-80">{c.ctaP}</p>
           <Link to="/contact" className="mt-8 inline-block rounded-full bg-primary-foreground px-6 py-3 font-semibold text-primary hover:opacity-90">{c.ctaBtn}</Link>
         </div>
