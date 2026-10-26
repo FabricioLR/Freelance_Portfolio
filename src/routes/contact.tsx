@@ -66,7 +66,7 @@ function Contact() {
             </a>
             <a href={`mailto:${EMAIL}?subject=${subject}`} className="rounded-2xl border bg-card p-8 transition-colors hover:border-primary">
               <span className="font-mono text-sm text-primary">{c.detailed}</span>
-              <h2 className="mt-2 text-2xl font-bold">Email</h2>
+              <h2 className="mt-2 text-2xl font-bold">{lang === "en" ? "Email" : "E-mail"}</h2>
               <p className="mt-2 break-all text-muted-foreground">{EMAIL}</p>
               <span className="mt-6 inline-block rounded-full bg-primary px-5 py-2 font-semibold text-primary-foreground">{c.emailBtn}</span>
             </a>
