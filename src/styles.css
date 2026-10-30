@@ -72,6 +72,20 @@
   h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
 }
 
+@utility wa-pulse {
+  animation: wa-pulse 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes wa-pulse {
+  0% { transform: scale(1); opacity: 0.55; }
+  70% { transform: scale(1.45); opacity: 0; }
+  100% { transform: scale(1.45); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-pulse { animation: none; opacity: 0; }
+}
+
 @utility bg-glow { background-image: var(--glow); }
 @utility grid-lines {
   background-image:
