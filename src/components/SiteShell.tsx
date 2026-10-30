@@ -33,22 +33,22 @@ export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-20 border-b bg-background/80 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link to="/" className="font-display text-lg font-bold">
-            Fabricio<span className="text-primary">LR</span>
+        <nav className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 py-4 sm:flex sm:justify-between sm:gap-6 sm:px-6">
+          <Link to="/" className="min-w-0 truncate font-display text-lg font-bold">
+            Fabricio<span className="text-muted-foreground">LR</span>
           </Link>
-          <div className="flex items-center gap-4 text-sm sm:gap-6">
-            <Link to="/" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground" }} activeOptions={{ exact: true }}>{t.services}</Link>
+          <div className="flex shrink-0 items-center gap-2 text-sm sm:gap-6">
+            <Link to="/" className="hidden text-muted-foreground hover:text-foreground sm:inline" activeProps={{ className: "text-foreground" }} activeOptions={{ exact: true }}>{t.services}</Link>
             <a href={PORTFOLIO_URL} target="_blank" rel="noreferrer" className="hidden text-muted-foreground hover:text-foreground sm:inline">{t.portfolio}</a>
             <button
               type="button"
               onClick={toggle}
               aria-label={t.toggleAria}
-              className="rounded-full border px-3 py-1 font-mono text-xs font-bold text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+              className="shrink-0 whitespace-nowrap rounded-full border px-3 py-1 font-mono text-xs font-bold text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
             >
               {t.switchLabel}
             </button>
-            <Link to="/contact" className="rounded-full bg-primary px-4 py-2 font-semibold text-primary-foreground hover:opacity-90">{t.contact}</Link>
+            <Link to="/contact" className="shrink-0 whitespace-nowrap rounded-full bg-primary px-3.5 py-2 font-semibold text-primary-foreground hover:opacity-90 sm:px-4">{t.contact}</Link>
           </div>
         </nav>
       </header>
