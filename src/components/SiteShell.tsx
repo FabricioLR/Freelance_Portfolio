@@ -62,8 +62,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </span>
         </div>
       </footer>
-      <div className="group fixed bottom-5 right-5 z-30 flex items-center gap-3">
-        <span className="pointer-events-none hidden rounded-full border bg-card px-3.5 py-2 text-xs font-semibold text-card-foreground opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:block">
+      <div className="group fixed bottom-5 right-5 z-30 flex items-center">
+        <span className="pointer-events-none absolute right-full top-1/2 mr-3 -translate-y-1/2 whitespace-nowrap rounded-full border bg-card px-3.5 py-2 text-xs font-semibold text-card-foreground opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 sm:block sm:hidden">
           {t.whatsappAria}
         </span>
         <span className="pointer-events-none absolute inset-0 rounded-full bg-whatsapp/50 wa-pulse" aria-hidden />
