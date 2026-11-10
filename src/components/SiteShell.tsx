@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { EMAIL, PORTFOLIO_URL, whatsappLink } from "@/lib/contact";
+import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PORTFOLIO_URL, whatsappLink } from "@/lib/contact";
 import { useLang } from "@/lib/i18n";
 
 const shell = {
@@ -59,6 +59,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <span className="flex gap-4">
             <a href={`mailto:${EMAIL}`} className="hover:text-foreground">{t.email}</a>
             <a href={whatsappLink(t.waMessage)} target="_blank" rel="noreferrer" className="hover:text-foreground">WhatsApp</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-foreground">
+              <span className="hidden sm:inline">@</span>{INSTAGRAM_HANDLE}
+            </a>
           </span>
         </div>
       </footer>

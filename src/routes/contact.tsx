@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
-import { EMAIL, whatsappLink } from "@/lib/contact";
+import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, whatsappLink } from "@/lib/contact";
 import { useLang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
@@ -29,6 +29,8 @@ const content = {
     detailed: "detailed",
     emailBtn: "Send email →",
     subject: "Freelance project",
+    igKicker: "on instagram",
+    igP: "Behind-the-scenes and recent projects.",
   },
   pt: {
     kicker: "// vamos conversar",
@@ -41,6 +43,8 @@ const content = {
     detailed: "mais detalhado",
     emailBtn: "Enviar e-mail →",
     subject: "Projeto freelance",
+    igKicker: "no instagram",
+    igP: "Bastidores e projetos recentes.",
   },
 } as const;
 
@@ -71,6 +75,21 @@ function Contact() {
               <span className="mt-6 inline-block rounded-full bg-primary px-5 py-2 font-semibold text-primary-foreground">{c.emailBtn}</span>
             </a>
           </div>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 flex items-center justify-center gap-3 rounded-2xl border bg-card px-6 py-4 text-center transition-colors hover:border-primary"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-primary" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+              <circle cx="12" cy="12" r="4.2" />
+              <circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none" />
+            </svg>
+            <span className="font-mono text-sm text-muted-foreground">{c.igKicker}</span>
+            <span className="font-semibold">@{INSTAGRAM_HANDLE}</span>
+            <span className="hidden text-muted-foreground sm:inline">· {c.igP}</span>
+          </a>
         </div>
       </section>
     </SiteShell>
